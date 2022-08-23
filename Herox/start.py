@@ -67,7 +67,7 @@ async def start_private(client: Client, message: Message):
             ],[
             InlineKeyboardButton("✚ Add me to your Group", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
             ],[
-            InlineKeyboardButton("👤 Owner ", url=f"https://t.me/{OWNER_NAME"),
+            InlineKeyboardButton("👤 Owner ", url=f"https://t.me/{The_Lazywarrior"),
             ]]
             )
         )

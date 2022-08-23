@@ -13,7 +13,6 @@ from config import (
     ASSISTANT_NAME,
     UPDATES_CHANNEL,
     START_IMG,
-    OWNER_ID,
 )
 from SJM.decorators import sudo_users_only
 from SJM.filters import command

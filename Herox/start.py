@@ -13,6 +13,7 @@ from config import (
     ASSISTANT_NAME,
     UPDATES_CHANNEL,
     START_IMG,
+    OWNER_ID,
 )
 from SJM.decorators import sudo_users_only
 from SJM.filters import command
@@ -62,12 +63,12 @@ async def start_private(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup( [[
             InlineKeyboardButton("🔎 How to Use? Commands Menu.", callback_data="cb_cmd")
             ],[
-            InlineKeyboardButton("📨 Updates", url=f"https://t.me/{UPDATES_CHANNEL}"),         
-            InlineKeyboardButton("📨 Support", url=f"https://t.me/{GROUP_SUPPORT}")
+            InlineKeyboardButton("📨 Updates", url=f"https://telegram.dog/{UPDATES_CHANNEL}"),         
+            InlineKeyboardButton("📨 Support", url=f"https://telegram.dog/{GROUP_SUPPORT}")
             ],[
-            InlineKeyboardButton("✚ Add me to your Group", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")
+            InlineKeyboardButton("✚ Add me to your Group", url=f"https://telegram.dog/{BOT_USERNAME}?startgroup=true")
             ],[
-            InlineKeyboardButton("👤 Owner ", url=f"https://t.me/The_Lazywarrior"),
+            InlineKeyboardButton("👤 Owner ", url=f"https://telegram.dog/The_Lazywarrior")
             ]]
             )
         )
@@ -84,15 +85,15 @@ async def start_group(client: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("• Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
+                InlineKeyboardButton("• Sᴜᴘᴘᴏʀᴛ", url=f"https://telegram.dog/{GROUP_SUPPORT}"),
                 InlineKeyboardButton(
-                    "• Uᴘᴅᴀᴛᴇs", url=f"https://t.me/{UPDATES_CHANNEL}"
+                    "• Uᴘᴅᴀᴛᴇs", url=f"https://telegram.dog/{UPDATES_CHANNEL}"
                 ),
             ]
         ]
     )
 
-    alive = f"**Hello {message.from_user.mention()}, i'm {BOT_NAME}**\n\n✨ Bot is working normally\n🍀 My Master: [{ALIVE_NAME}](https://t.me/{OWNER_NAME})\n🍀 Pyrogram Version: `{pyrover}`\n✨ Python Version: `{__python_version__}`\n🍀 Uptime Status: `{uptime}`\n\n**𝗧𝗵𝗮𝗻𝗸𝘀 𝗳𝗼𝗿 𝗔𝗱𝗱𝗶𝗻𝗴 𝗺𝗲 𝗵𝗲𝗿𝗲, 𝗳𝗼𝗿 𝗽𝗹𝗮𝘆𝗶𝗻𝗴 𝗺𝘂𝘀𝗶𝗰 𝗼𝗻 𝘆𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽 𝘃𝗼𝗶𝗰𝗲 𝗰𝗵𝗮𝘁** ❤"
+    alive = f"**Hello {message.from_user.mention()}, i'm {BOT_NAME}**\n\n✨ Bot is working normally\n🍀 My Master: [{ALIVE_NAME}](https://telegram.dog/{OWNER_NAME})\n🍀 Pyrogram Version: `{pyrover}`\n✨ Python Version: `{__python_version__}`\n🍀 Uptime Status: `{uptime}`\n\n**𝗧𝗵𝗮𝗻𝗸𝘀 𝗳𝗼𝗿 𝗔𝗱𝗱𝗶𝗻𝗴 𝗺𝗲 𝗵𝗲𝗿𝗲, 𝗳𝗼𝗿 𝗽𝗹𝗮𝘆𝗶𝗻𝗴 𝗺𝘂𝘀𝗶𝗰 𝗼𝗻 𝘆𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽 𝘃𝗼𝗶𝗰𝗲 𝗰𝗵𝗮𝘁** ❤"
 
     await message.reply_photo(
         photo=f"{ALIVE_IMG}",
